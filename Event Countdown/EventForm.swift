@@ -25,7 +25,7 @@ struct EventForm: View {
                 ColorPicker("Text Color", selection: $textColor)
             }
         }
-        .navigationTitle(event == nil ? "Add Event" : "Edit Event")
+        .navigationTitle(event == nil ? "Add Event" : "Edit \(title.isEmpty ? "Event" : title)")
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 Button("Save") {
